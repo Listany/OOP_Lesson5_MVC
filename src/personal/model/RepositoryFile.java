@@ -58,7 +58,7 @@ public class RepositoryFile implements Repository {
         saveRepository(users);
     }
 
-    private static User foundUserInList(String userId, List<User> users) {
+    public User foundUserInList(String userId, List<User> users) {
         User foundUser = null;
         for (User item : users
              ) {
@@ -77,7 +77,7 @@ public class RepositoryFile implements Repository {
             foundUser.setFirstName(user.getFirstName());
             foundUser.setLastName(user.getLastName());
             foundUser.setPhone(user.getPhone());
+            saveRepository(users);
         }
-        saveRepository(users);
     }
 }
